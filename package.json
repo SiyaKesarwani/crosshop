@@ -1,0 +1,24 @@
+{
+  "name": "crosshop",
+  "version": "1.0.0",
+  "description": "Bridge solution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "hardhat": "^2.17.3"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomicfoundation/hardhat-verify": "^2.0.3",
+    "@openzeppelin/contracts": "^3.4.1",
+    "@openzeppelin/contracts-upgradeable": "^3.4.1",
+    "chai": "^4.4.1",
+    "dotenv": "^16.3.1",
+    "ethers": "^5.4.7",
+    "fs-extra": "^11.1.1"
+  }
+}
