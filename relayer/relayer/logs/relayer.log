@@ -1,0 +1,11 @@
+[2026-03-23T08:27:03.525Z] [INFO] === Starting RelayerService ===
+[2026-03-23T08:27:03.547Z] [INFO] Relayer wallet initialized {"address":"0xC5f0d79048c9a77EB196588De43f9D2305fC5e71"}
+[2026-03-23T08:29:41.309Z] [ERROR] Failed to setup listener for sepolia {"error":"could not detect network (event=\"noNetwork\", code=NETWORK_ERROR, version=providers/5.8.0)"}
+[2026-03-23T08:29:42.120Z] [INFO] Event listener setup for arbiSepolia {"chainId":421614,"crossHopAddress":""}
+[2026-03-23T08:29:43.335Z] [INFO] Event listener setup for optiSepolia {"chainId":11155420,"crossHopAddress":""}
+[2026-03-23T08:29:44.570Z] [INFO] Event listener setup for amoy {"chainId":80002,"crossHopAddress":""}
+[2026-03-23T08:29:44.643Z] [ERROR] Failed to setup listener for bnbTestnet {"error":"could not detect network (event=\"noNetwork\", code=NETWORK_ERROR, version=providers/5.8.0)"}
+[2026-03-23T08:29:45.867Z] [INFO] Event listener setup for fantomTestnet {"chainId":4002,"crossHopAddress":""}
+[2026-03-23T08:29:45.868Z] [INFO] RelayerService initialized successfully
+[2026-03-23T08:29:45.875Z] [INFO] Relayer service started and listening for events
+[2026-03-23T08:43:11.434Z] [INFO] Relayer service stopped

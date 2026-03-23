@@ -1,0 +1,27 @@
+{
+  "name": "crosshop-relayer",
+  "version": "1.0.0",
+  "description": "Off-chain relayer service for CrossHop cross-chain bridge protocol",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "LOG_LEVEL=debug node index.js",
+    "test": "echo \"No tests configured\""
+  },
+  "keywords": [
+    "relayer",
+    "bridge",
+    "crosshop",
+    "cross-chain",
+    "ethereum"
+  ],
+  "author": "CrossHop",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ethers": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20.20.1"
+  }
+}

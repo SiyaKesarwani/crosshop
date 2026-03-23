@@ -45,16 +45,6 @@ module.exports = {
                  `0x${process.env.DEPLOYER_PRIVATE_KEY_3}`
                 ],
     },
-    goerli: {
-      url: process.env.GOERLI_API,
-      chainId: 5,
-      timeout: 1000000,
-      allowUnlimitedContractSize: true,
-      accounts: [`0x${process.env.DEPLOYER_PRIVATE_KEY_1}`,
-                 `0x${process.env.DEPLOYER_PRIVATE_KEY_2}`,
-                 `0x${process.env.DEPLOYER_PRIVATE_KEY_3}`
-                ],
-    },
     sepolia: {
       chainId: 11155111,
       url: process.env.SEPOLIA_API,
@@ -125,10 +115,10 @@ module.exports = {
                 ],
     },
     hardhat: {
-      forking: {
-        url: process.env.MAINNET_API,
-        blockNumber: 19475958,
-      },
+      // forking: {
+      //   url: process.env.MAINNET_API,
+      //   blockNumber: 19475958,
+      // },
       chainId: 31337,
       gas: 12000000,
       accounts: {
