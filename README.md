@@ -4,6 +4,31 @@ CrossHop is a cross-chain asset transfer protocol that enables users to securely
 
 > ⚡ Designed with a focus on security, message integrity, and prevention of double-spend or replay attacks across chains.
 
+> 💡 Implements a simplified bridge architecture to demonstrate secure cross-chain asset transfers and message validation.
+
+## 🧠 Architecture
+
+Below is the high-level architecture of the CrossHop protocol:
+![CrossHop Architecture](./assets/crosshop-architecture.png)
+
+The protocol consists of:
+- Source chain contracts (locking assets)
+- Destination chain contracts (minting/unlocking assets)
+- Off-chain relayer for message passing
+
+## 📦 Message Structure
+
+Each cross-chain transfer includes:
+
+- sender address  
+- recipient address  
+- token amount  
+- source chain ID  
+- destination chain ID  
+- unique nonce  
+
+This ensures uniqueness and prevents replay attacks.
+
 ## 🔄 Cross-Chain Flow
 
 The protocol supports bidirectional asset transfers between chains using a lock-and-mint mechanism:
@@ -33,18 +58,13 @@ The protocol supports bidirectional asset transfers between chains using a lock-
 - Signature verification for relayer messages  
 - Access control for privileged operations  
 - Safe handling of cross-chain message execution  
+- Nonce-based tracking to ensure each transaction is executed only once  
 
 ## ⚖️ Trust Assumptions
 
 - Relayer is assumed to be trusted / semi-trusted  
 - Destination chain relies on message authenticity from relayer  
 - No decentralized validation (can be extended in future)  
-
-## 🧠 Architecture
-The protocol consists of:
-- Source chain contracts (locking assets)
-- Destination chain contracts (minting/unlocking assets)
-- Off-chain relayer for message passing
 
 ## ⚠️ Edge Cases Handled
 
@@ -57,6 +77,12 @@ The protocol consists of:
 
 - Unit tests written in Solidity using Foundry  
 - Covers deposit, message verification, minting, and replay protection  
+
+## ⚠️ Limitations
+
+- Relayer introduces centralization risk  
+- No on-chain light client verification  
+- Requires trust in message forwarding layer  
 
 ## 🌍 Why CrossHop?
 
@@ -71,10 +97,18 @@ Cross-chain interoperability is a key challenge in Web3. CrossHop demonstrates h
 
 ## ▶️ Run Locally
 
-```shell
+```bash
+git clone https://github.com/SiyaKesarwani/crosshop.git
+cd crosshop
+
 npm install
 npx hardhat compile
+
+# Run tests
 npx hardhat test
+
+# Gas report
 REPORT_GAS=true npx hardhat test
-npx hardhat run deploy/deploy.js
-```
+
+# Deploy contracts
+npx hardhat run deploy/deploy.js --network hardhat
